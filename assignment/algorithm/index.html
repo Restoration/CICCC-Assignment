@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+var y = 1994;
+var m = 2;
+var d = 2;
+
+var nowDate = new Date();
+var ny = nowDate.getFullYear();
+var nm = nowDate.getMonth() + 1;
+var nd = nowDate.getDate();
+
+var day = 0;
+var mArr = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+for( i = y+1; i < ny; i++ ){
+	// check leap year
+    var ly = 0;
+    if(i % 4 == 0 && ( i % 100 != 0 || i % 400 == 0 )){
+        ly = 1;
+        mArr[2] = 29;
+	}
+	// get days
+	// not include birth year and now year
+	if(ny - y > 1 ){
+	    day += 365 + ly;
+	}
+
+	// get days on now year
+	if((i+1) == ny){
+	    for(var k=1; k < nm; k++){
+	        day += mArr[k];
+	    }
+	    day += nd;
+	}
+
+	// get days on birth year
+	if((i -1) == y){
+	    day += 365 + ly;
+	    for(var k=1; k < m; k++){
+	        day -= mArr[k];
+	    }
+	    day -= d;
+	}
+	console.log(day);
+}
+</script>
+
+</body>
+</html>
