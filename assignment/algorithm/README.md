@@ -11,7 +11,7 @@ Next,get days on now year from jun 1st until today.
 (2018/01/01 〜 2018/09/28)
 
 ## Step.3
-- get days on birth year (1994/01/01 〜 1994/02/02)
+Then,get days on birth year (1994/01/01 〜 1994/02/02)  
 
 Example  
 31+2 = 33  
