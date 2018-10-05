@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144....) and get Nth Fibonacci number
+var num = prompt("What is your nth number?");
+var prevNum = 0;
+var newNum = 0;
+var curNum = 0;
+var arr = [];
+for(var i =1; i <= num; i++){
+	if(i == 1){
+		prevNum = parseInt(i);
+		curNum = parseInt(i);
+		newNum = parseInt(prevNum) + parseInt(curNum);
+		arr = [prevNum,curNum,newNum];
+	} else {
+		prevNum = parseInt(curNum);
+		curNum = parseInt(newNum);
+		newNum = parseInt(prevNum) + parseInt(curNum);
+		arr.push(newNum);
+	}
+}
+for(var i =0; i < num; i++){
+	document.write(arr[i]+"&nbsp;");
+}
+
+
+</script>
+</body>
+</html>

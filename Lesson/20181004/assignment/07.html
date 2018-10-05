@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//Create a JavaScript code that calculates the Pi (using Gregory Leibniz series) based on the the following series to print the sum after 10th calculation
+//4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + 4/13-...
+var result = 4;
+//var ope;
+var num = 0;
+
+document.write(result);
+for(var i = 1; i <=11; i++){
+	if(i == 1){
+		num = parseInt(i)+2;
+	} else {
+		num = parseInt(num) + 2;
+	}
+	if(i % 2 == 0){
+		document.write("&nbsp+&nbsp4/"+num+"&nbsp;");
+		result += (4/num);
+	} else {
+		document.write("&nbsp-&nbsp4/"+num+"&nbsp;");
+		result -= (4/num)
+	}
+	console.log(result);
+}
+document.write("=&nbsp");
+document.write(result);
+
+
+</script>
+</body>
+</html>

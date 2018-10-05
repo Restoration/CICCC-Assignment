@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//ask 5 subjects and get the average and show the evaluation (if, else if, else)
+var english = prompt("What is your score for English?");
+var math = prompt("What is your score for Math?");
+var chemistry = prompt("What is your score for Chemistry?");
+var biology = prompt("What is your score for Biology?");
+var business = prompt("What is your score for Business?");
+var subject = [english,math,chemistry,biology,business];
+var result = 0;
+//result = parseInt(english) + parseInt(math) + parseInt(chemistry) + parseInt(biology) + parseInt(business);
+
+for(var i =0; i < 5; i++){
+	var avg = subject[i];
+	result = result + parseInt(avg);
+}
+result = (parseInt(result) / 5)
+document.write("Average is "+ result + '<br />');
+
+if(result > 90){
+	document.write("Great!");
+} else if(result > 80){
+	document.write("Good!");
+} else if(result > 70){
+	document.write("not bad.");
+} else if(result > 60){
+	document.write("You can do better");
+} else if(result > 50){
+	document.write("Work harder");
+} else {
+	document.write("Go home");
+}
+
+</script>
+</body>
+</html>
