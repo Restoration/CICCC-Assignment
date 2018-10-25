@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class AverageClass {
 	public static void main(String args[]){
-		System.out.println("Please, input subject.");
+		System.out.println("Enter number of subjects");
 		Scanner scan = new Scanner(System.in);
 		int count = Integer.parseInt(scan.next());
 		int score[] = new int[count];
 		int sum = 0;
-		System.out.println("Please enter your score");
+		System.out.println("Enter marks");
 		for(int j = 0; j < count; j++) {
 			score[j] = Integer.parseInt(scan.next());
 			sum += score[j];
