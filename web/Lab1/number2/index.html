@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table</title>
+</head>
+<body>
+    <style>
+    h1{
+        text-align: center;
+        margin: 0 auto 2px;
+    }
+    table{
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: solid 1px #000000;
+    }
+    th,td{
+        text-align: center;
+        border: solid 1px #000000;
+    }
+    th{
+        background: #a0a0a0;
+    }
+    </style>
+    <h1>HTML&CSS</h1>
+    <table>
+        <thead>
+            <th>Inline</th>
+            <th>Internal</th>
+            <th>External</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h1 style=&quot;&quot;&gt;</td>
+                <td>&lt;style&gt;&lt;/style&gt;</td>
+                <td>&lt;link rel=&quot;&quot;&gt;</td>
+            </tr>
+            <tr>
+                <td colspan="2">Inside HTML</td>
+                <td>Outside HTML</td>
+            </tr>
+            <tr>
+                <td>Most Powerful</td>
+                <td>Resides in <head></td>
+                <td>Separate HTML</td>
+            </tr>
+            <tr>
+                <td colspan="2">Remark 1</td>
+                <td rowspan="2">Remark 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Remark 2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
