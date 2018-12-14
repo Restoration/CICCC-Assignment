@@ -1,0 +1,137 @@
+#container {
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+}
+
+#container h1 {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #909090;
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  color: #fff;
+  border: 0px;
+  padding: 16px;
+  min-width: 160px;
+}
+
+input[type="submit"] {
+  margin: 0 auto 10px;
+  background-color: #004ec1;
+}
+
+input[type="reset"] {
+  background-color: #ff003d;
+}
+
+#task-1 {
+  margin: 30px auto 80px;
+}
+
+#task-1 legend {
+  font-size: 20px;
+}
+
+#task-1 fieldset {
+  width: 100%;
+  border: solid 2px #1f1f1f;
+  padding: 20px;
+}
+
+#task-1 .wrap {
+  display: flex;
+  justify-content: center;
+}
+
+#task-1 .box {
+  width: 50%;
+}
+
+#task-1 ul li {
+  margin: 0 0 20px;
+}
+
+#task-1 label span {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+#task-1 input[type="text"],
+#task-1 input[type="email"],
+#task-1 textarea {
+  width: 200px;
+  border: solid 2px #d7d7d7;
+}
+
+#task-1 textarea {
+  min-height: 80px;
+}
+
+#task-1 .rightBox {
+  position: relative;
+}
+
+#task-1 .rightBox ul {
+  position: absolute;
+  bottom: 0px;
+}
+
+#task-2 legend {
+  font-size: 20px;
+}
+
+#task-2 fieldset {
+  width: 100%;
+  border: solid 2px #1f1f1f;
+  padding: 20px;
+}
+
+#task-2 .wrap {
+  display: flex;
+  justify-content: center;
+}
+
+#task-2 .box {
+  width: 30%;
+}
+
+#task-2 .gender select {
+  width: 80%;
+}
+
+#task-2 .hobbies label span {
+  display: inline-block;
+  width: 50px;
+}
+
+#task-2 .course label {
+  display: block;
+}
+
+#task-2 .rightBtn {
+  display: inline-block;
+  width: 90%;
+  margin: 40px 0 0;
+}
+
+#task-2 .rightBtn input {
+  float: right;
+}
+
+#copyright {
+  margin: 30px auto;
+  text-align: center;
+}
