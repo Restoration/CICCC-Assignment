@@ -22,23 +22,10 @@
 				<nav>
 					<ul id="menu">
 						<li><a href="./index.html">HOME</a></li>
-						<li><a href="./stuff.html">STUFF</a></li>
+						<li><a href="./staff.html">STAFF</a></li>
 						<li><a href="./program.html">PROGRAM</a></li>
 						<li><a href="./contact.html">CONTACT</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<div id="wrap">
-			<div class="videoWrap">
-				<video src="img/bg.mp4" autoplay loop width="100%" height="100%">
-					<img src="images/jewellery.jpg" alt="Placeholder">
-				</video>
-			</div>
-		</div>
-		<footer id="footer">
-			<p id="copyright">&copy; Ballet Bloch Canada</p>
-		</footer>
-	</div>
-</body>
-</html>

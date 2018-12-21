@@ -1,15 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
-
-
 /*
 font-family: 'Dosis', sans-serif;
 font-family: 'Alex Brush', cursive;
 */
 
 #container{
+	overflow: hidden;
+	position: relative;
 	font-size: 18px;
 	font-family: "Times New Roman", Times, serif;
 }
@@ -28,15 +27,25 @@ a:visited{
 	color: #2a2a2a;
 }
 
+h2{
+	margin: 30px 0 30px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 92px;
+	font-family: 'Alex Brush', cursive;
+}
+
 ul li{
 	list-style-type: none;
 }
 
 header#header{
 	position: fixed;
+	top: 0px;
 	z-index: 100;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 2px 4px 10px #828282;
 }
 
 header#header div#headerInner{
@@ -65,10 +74,23 @@ header#header div#headerInner ul#menu li a{
 
 #wrap #videoWrap{
 	 position: relative;
-	 z-index: 10;
+	 opacity: 0.9;
 }
 #wrap #videoWrap video{
+	position:fixed;
+	right:0;
+	bottom:0;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	z-index:-1;
+}
 
+.wrapInner{
+	display: block;
+	overflow-y: scroll;
+	padding: 200px auto 0;
 }
 
 footer#footer{
@@ -78,8 +100,106 @@ footer#footer{
 	width: 100%;
 	padding: 20px 0 20px;
 	text-align: center;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 2px 4px 10px 4px #828282;
 }
 #copyright{
 	text-align: center;
 }
+
+
+/*Common
+--------------------*/
+.main_bg{
+	position:fixed;
+	right:0;
+	bottom:0;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	z-index:-1;
+	background-size: cover;
+	opacity: 0.7;
+}
+#staff,
+#contact{
+	margin: 160px 0;
+}
+
+#staffInner,
+#contactInner{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 20px;
+	background: rgba(255,255,255,0.8);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Staff
+--------------------*/
+#staff_bg{
+	background: url("../img/staff_bg.jpg");
+}
+
+.staffBox{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.staffBox .photo{
+	width: 40%;
+}
+.staffBox .photo img{
+	width: 100%;
+}
+.staffBox .description{
+	width: 40%;
+	margin: 0 0 0 20px;
+	border: solid 1px red;
+}
+
+/*Contact
+--------------------*/
+#contact_bg{
+	background: url("../img/contact_bg.jpg");
+}
+#contact label{
+	display: block;
+}
+
+#contact input{
+	width: 100%;
+	margin: 0 0 20px;
+	padding: 6px 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#contact textarea{
+	width: 100%;
+	min-height: 300px;
+	margin: 0 0 20px;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#contact input[type="submit"]{
+	display: block;
+	width: 20%;
+	margin: 0 auto;
+	padding: 20px 0;
+	border: 0;
+	text-align: center;
+	font-size: 24px;
+}
+
