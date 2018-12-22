@@ -6,11 +6,34 @@ font-family: 'Dosis', sans-serif;
 font-family: 'Alex Brush', cursive;
 */
 
+/* iOS button reset */
+input[type="submit"],
+input[type="button"] {
+	border-radius: 0;
+	-webkit-box-sizing: content-box;
+	-webkit-appearance: button;
+	appearance: button;
+	border: none;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+	display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+	outline-offset: -2px;
+}
+
+
 #container{
 	overflow: hidden;
 	position: relative;
 	font-size: 18px;
 	font-family: "Times New Roman", Times, serif;
+/* font-family: 'Work Sans', sans-serif; */
+	line-height: 1.2;
 }
 /*TextLink
 --------------------*/
@@ -30,7 +53,7 @@ a:visited{
 h2{
 	margin: 30px 0 30px;
 	text-align: center;
-	color: #ffffff;
+	color: #000000;
 	font-size: 92px;
 	font-family: 'Alex Brush', cursive;
 }
@@ -49,6 +72,7 @@ header#header{
 }
 
 header#header div#headerInner{
+	position: relative;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -59,8 +83,23 @@ header#header div#headerInner h1{
 
 header#header div#headerInner nav{
 	display: inline-block;
-	margin: 28px 0 0 100px;
+	margin: 30px 0 0 100px;
 	vertical-align: top;
+}
+
+.mobileNav{
+	display: none;
+}
+
+header#header div#headerInner #sns{
+	float: right;
+	margin: 22px 0 0;
+}
+header#header div#headerInner #sns li{
+	display: inline-block;
+}
+header#header div#headerInner #sns li i{
+	font-size: 32px;
 }
 
 header#header div#headerInner ul#menu li{
@@ -105,6 +144,7 @@ footer#footer{
 }
 #copyright{
 	text-align: center;
+	font-size: 14px;
 }
 
 
@@ -123,22 +163,45 @@ footer#footer{
 	opacity: 0.7;
 }
 #staff,
+#program,
 #contact{
 	margin: 160px 0;
 }
 
+#programInner,
 #staffInner,
 #contactInner{
 	display: block;
 	width: 80%;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 20px 40px;
 	background: rgba(255,255,255,0.8);
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
+/*Program
+--------------------*/
+#program_bg{
+	background: url("../img/program_bg.jpg");
+}
+
+.programBox{
+	width: 80%;
+	margin: 0 auto 60px;
+}
+.programBox h3{
+	margin: 0 0 10px;
+	border-bottom: solid 1px #909090;
+	font-size: 18px;
+}
+.programBox h3 i{
+	margin: 0 6px 0 0;
+}
+.programBox img{
+	width: 100%;
+	}
 
 /*Staff
 --------------------*/
@@ -150,7 +213,7 @@ footer#footer{
 	display: flex;
 	justify-content: center;
 	width: 80%;
-	margin: 0 auto;
+	margin: 0 auto 60px;
 }
 
 .staffBox .photo{
@@ -159,10 +222,13 @@ footer#footer{
 .staffBox .photo img{
 	width: 100%;
 }
+.staffBox h3{
+	margin: 0 0 14px;
+	font-size: 20px;
+}
 .staffBox .description{
 	width: 40%;
 	margin: 0 0 0 20px;
-	border: solid 1px red;
 }
 
 /*Contact
@@ -175,19 +241,23 @@ footer#footer{
 }
 
 #contact input{
-	width: 100%;
-	margin: 0 0 20px;
+	display: block;
+	width: 80%;
+	margin: 0 auto 20px;
 	padding: 6px 2px;
+	border: solid 1px #6f6f6f;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 #contact textarea{
-	width: 100%;
+	display: block;
+	width: 80%;
 	min-height: 300px;
-	margin: 0 0 20px;
-	border: 0;
+	margin: 0 auto 20px;
+	padding: 6px 4px;
+	border: solid 1px #6f6f6f;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -197,9 +267,163 @@ footer#footer{
 	display: block;
 	width: 20%;
 	margin: 0 auto;
-	padding: 20px 0;
-	border: 0;
+    padding: 0.3em 1em;
+    background: #373737;
+    border: solid 1px #6f6f6f;
+    color: #ffffff;
 	text-align: center;
-	font-size: 24px;
+	text-decoration: none;
+	font-size: 18px;
+    transition: .4s;
 }
 
+#contact input[type="submit"]:hover {
+    color: #373737;
+    background: #fff;
+}
+
+
+
+@media screen and (max-width: 800px){
+h2{
+	font-size: 50px;
+}
+header#header div#headerInner h1 img{
+	display: block;
+	margin: 0 auto;
+}
+
+header#header div#headerInner nav{
+	display: none;
+}
+
+header#header div#headerInner #sns{
+	float: right;
+	margin: 22px 0 0;
+	position: absolute;
+	top: 20px ;
+	right: 50px;
+}
+
+.mobileNav{
+	display: block;
+	position: absolute;
+	top: 45px ;
+	right: 10px;
+
+}
+
+.staffBox{
+	display: block;
+	width: 100%;
+}
+.staffBox .photo{
+	display: block;
+	width: 100%;
+	margin: 0 auto 20px;
+}
+.staffBox .description{
+	display: block;
+	width: 100%;
+	margin: 0 auto 20px;
+}
+
+#contact input[type="submit"]{
+	width: 100%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+#nav-drawer {
+  position: relative;
+}
+
+.nav-unshown {
+  display:none;
+}
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+#mobileMenu li{
+	border-bottom: solid 1px #7e7e7e;
+}
+#mobileMenu li a{
+	display: block;
+	width: 100%;
+	padding: 20px 0;
+	text-decoration: none;
+	text-align: center;
+}

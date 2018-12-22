@@ -13,3 +13,4 @@ https://www.balletbeautiful.com/
 ## Google Font
 [Alex Brush](https://fonts.google.com/specimen/Alex+Brush)
 [Dosis](https://fonts.google.com/specimen/Dosis)
+[WorkSans](https://fonts.google.com/specimen/Work+Sans?selection.family=Work+Sans)
