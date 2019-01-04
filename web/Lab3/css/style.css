@@ -117,6 +117,7 @@ header#header div#headerInner ul#menu li a{
 }
 #wrap #videoWrap video{
 	position:fixed;
+	top: 5px;
 	right:0;
 	bottom:0;
 	min-width:100%;
@@ -133,9 +134,6 @@ header#header div#headerInner ul#menu li a{
 }
 
 footer#footer{
-	position: fixed;
-	z-index: 100;
-	bottom: 0px;
 	width: 100%;
 	padding: 20px 0 20px;
 	text-align: center;
@@ -329,7 +327,7 @@ header#header div#headerInner #sns{
 }
 
 #contact input[type="submit"]{
-	width: 100%;
+	width: 80%;
 }
 
 
