@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+
+	.menu {
+	    max-width: 100%;
+	    margin: 0 auto;
+	    padding: 0;
+	}
+
+	.menu a {
+	    display: block;
+	    padding: 10px;
+	    text-decoration: none;
+	    color: #000;
+	    line-height: 1;
+	}
+
+	label {
+	    display: block;
+	    margin: 0 0 2px 0;
+	    padding :12px;
+	    line-height: 1;
+	    color :#fff;
+	    background: #373737;
+	    cursor :pointer;
+	    text-align: center;
+	}
+	label:hover{
+		background :#007bbb;
+	}
+	input {
+	    display: none;
+	}
+
+	.menu ul {
+	    margin: 0;
+	    padding: 0;
+	    background :#f4f4f4;
+	    list-style: none;
+	}
+
+	.menu li {
+	    max-height: 0;
+	    overflow-y: hidden;
+	    -webkit-transition: all 0.5s;
+	    -moz-transition: all 0.5s;
+	    -ms-transition: all 0.5s;
+	    -o-transition: all 0.5s;
+	    transition: all 0.5s;
+	    background: #f2f2f2;
+	    color: #000;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.menu li:hover{
+		background :#007bbb;
+	}
+
+	#menu_bar01:checked ~ #links01 li,
+	#menu_bar02:checked ~ #links02 li {
+	    max-height: 46px;
+	    padding: 10px 0;
+	    opacity: 1;
+	}
+
+	</style>
+</head>
+<body>
+
+<div class="menu">
+	<label for="">ShowMenu</label>
+	<label for="">Home</label>
+    <label for="menu_bar01">About ↓</label>
+    <input type="checkbox" id="menu_bar01" class="accordion" />
+    <ul id="links01">
+      	<li>Who we are</li>
+      	<li>What we do</li>
+    </ul>
+    <label for="menu_bar02">Courses ↓</label>
+    <input type="checkbox" id="menu_bar02" class="accordion" />
+    <ul id="links02">
+      	<li>Who we are</li>
+      	<li>What we do</li>
+      	<li>Who we are</li>
+      	<li>What we do</li>
+    </ul>
+    <label for="">News</label>
+    <label for="">Contact</label>
+</div>
+
+
+</body>
+</html>
