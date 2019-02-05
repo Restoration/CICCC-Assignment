@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	img{
+		max-width: 100%;
+		width: auto;
+		height: auto;
+	}
+	ul{
+	}
+	ul li{
+		display: inline-block;
+		word-wrap: break-word;
+		min-width: 10%;
+		width: 20%;
+		min-height: 600px;
+		background: #b1b1b1;
+		border-radius: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-o-border-radius: 20px;
+		list-style-position: inside;
+		list-style-type: none;
+		border: solid 2px #000;
+		padding: 20px 20px;
+		position: relative;
+		vertical-align: top;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		box-shadow: 2px 2px 10px #000;
+		-moz-box-shadow: 2px 2px 10px #000;
+		-webkit-box-shadow: 2px 2px 10px #000;
+		margin: 0 -20px 0 0;
+		transition: width 0.7s linear;
+	}
+	ul li:nth-child(1){
+		z-index: 100;
+	}
+	ul li:nth-child(2){
+		z-index: 200;
+	}
+	ul li:nth-child(3){
+		z-index: 300;
+	}
+	ul li:nth-child(4){
+		z-index: 400;
+	}
+	ul li:hover{
+		width: 30%;
+	}
+	ul li:nth-child(1):hover{
+		animation: colorchange-1 1s;
+		animation-fill-mode: forwards;
+	}
+	ul li:nth-child(2):hover{
+		animation: colorchange-2 1s;
+		animation-fill-mode: forwards;
+	}
+	ul li:nth-child(3):hover{
+		animation: colorchange-3 1s;
+		animation-fill-mode: forwards;
+	}
+	ul li:nth-child(4):hover{
+		animation: colorchange-4 1s;
+		animation-fill-mode: forwards;
+	}
+	ul li img{
+		display: block;
+		width: 128px;
+		height: 128px;
+		text-align: center;
+	}
+	ul li p{
+	}
+
+
+    @keyframes colorchange-1
+    {
+      0%   {background: #d2dcff;}
+      50%  {background: #879dff;}
+      100% {background: #496dff;}
+
+    }
+    @keyframes colorchange-2
+    {
+      0%   {background: #ffb0b0;}
+      50%  {background: #ff5555;}
+      100% {background: #f11b54;}
+
+    }
+    @keyframes colorchange-3
+    {
+      0%   {background: #ffb1b1;}
+      50%  {background: #ff5555;}
+      100% {background: #ff0000;}
+
+    }
+    @keyframes colorchange-4
+    {
+      0%   {background: #88ffa0;}
+      50%  {background: #239a31;}
+      100% {background: #00530f;}
+
+    }
+
+
+
+	</style>
+</head>
+<body>
+<ul>
+	<li>
+		<img src="image/one.png" alt="one" width="128" height="128">
+		<p>Good Programming Practices call attention to techniques that will help you produce programs that are clearer, more understandable and more maintinable.</p>
+	</li>
+	<li>
+		<img src="image/two.png" alt="two" width="128" height="128">
+		<p>Error-Prevenion Tips contain suggestions for exposing bugs and removoing them from your programs; many describe aspects of programming that prevent bugs from getting into programs in the first place.</p>
+	</li>
+	<li>
+		<img src="image/three.png" alt="three" width="512" height="512">
+		<p>Common Programming Errors point out the errors that students tend to make frequently. Threse Common Programming Errors reduce the likelihood that you'll make the same mistakes.</p>
+	</li>
+	<li>
+		<img src="image/four.png" alt="four" width="128" height="128">
+		<p>Software Engineering Observations highlight architectural and design issues that affect the construction of software systems, especially large-scale systems.</p>
+	</li>
+</ul>
+</body>
+</html>
+
+
+
+
