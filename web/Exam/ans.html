@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloWorld</title>
+</head>
+<body>
+    <div id="container">
+        <div id="wrap">
+            <p id="msg"></p>
+        </div>
+    </div>
+<script>
+function getParam(){
+    let vars = {};
+    let param = location.search.substring(1).split('&');
+    for(let i = 0; i < param.length; i++) {
+        let keySearch = param[i].search(/=/);
+        let key = '';
+        if(keySearch != -1) key = param[i].slice(0, keySearch);
+        let val = param[i].slice(param[i].indexOf('=', 0) + 1);
+        if(key != '') vars[key] = decodeURI(val);
+    }
+    return vars;
+}
+
+function render(){
+    let param = getParam();
+    let msg = "Hello, "+param.first+" "+param.last+" Nice work! Let’s stat!";
+    document.getElementById('msg').innerHTML = msg;
+}
+function init(){
+    render(name);
+}
+init();
+
+</script>
+</body>
+</html>
