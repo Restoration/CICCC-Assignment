@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+var myArray = []
+
+// Return random number
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+// Prepare rundom array
+function populateArray(count){
+    var tmpArray = []
+    for (var i = 0; i < count; i++){
+        tmpArray.push(getRandomInt(10));
+    }
+    return tmpArray;
+}
+
+myArray = populateArray(100);
+
+function BubbleSort(anArray){
+    var stillNeedsSorting = true;
+    while (stillNeedsSorting){
+        stillNeedsSorting = false;
+        for (var i = 0; i < anArray.length-1; i++){
+            var firstNumber = anArray[i];
+            var secondNumber = anArray[i+1];
+            if (firstNumber > secondNumber){
+                stillNeedsSorting = true;
+                var temp = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = temp;
+                anArray[i] = firstNumber;
+                anArray[i+1] = secondNumber;
+            }
+        }
+    }
+}
+console.log("Array before sorting: " +  myArray);
+//BubbleSort(myArray)
+console.log("Array after sorting: " + myArray)
+
+
+function sort(arr){
+    var flg = true;
+    while(flg){
+        flg = false;
+        for(var i=0; i <= arr.length; i++){
+            // get the data
+            var first = arr[i];
+            var second = arr[i+1];
+            // compare
+            if(first > second){
+                flg = true;
+                // switch data
+                var tmp = first;
+                first = second;
+                second = tmp;
+                // insert data
+                arr[i] = first;
+                arr[i+1] = second;
+            }
+        }
+    }
+}
+console.log(myArray);
+sort(myArray);
+console.log(myArray);
+
+
+
+</script>
+</body>
+</html>
