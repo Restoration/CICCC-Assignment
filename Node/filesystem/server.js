@@ -14,13 +14,6 @@ const app = new Koa();
  *
  * */
 
-app.use(ctx => {
-    ctx.body = 'Hello Koa';
-    //saveFile();
-    //deleteFile();
-    //readDir();
-});
-
 
 const readDir = () => {
     fs.readdir('./files/', (err,res) => {
@@ -55,6 +48,14 @@ const deleteFile = () => {
         console.log('Delete!');
     });
 }
+
+app.use(ctx => {
+    ctx.body = 'Hello Koa';
+    //saveFile();
+    //deleteFile();
+    //readDir();
+});
+
 
 
 app.listen(3000);
