@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "ava": "^1.4.1",
+    "dotenv": "^8.0.0",
     "fs": "0.0.1-security",
     "koa": "^2.7.0"
   }
