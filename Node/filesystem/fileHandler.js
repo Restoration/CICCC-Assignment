@@ -1,4 +1,5 @@
 const fs = require('fs');
+const PATH = './files';
 
 /*
  * list files in a folder
@@ -13,34 +14,34 @@ const fs = require('fs');
 
 
 const readDir = () => {
-    fs.readdir('./files/', (err,res) => {
+    fs.readdir(`${PATH}`, (err,res) => {
         if (err) throw err;
         console.log(res);
     });
 }
 
-const renameFile = () => {
-    fs.rename('mynewfile1.txt', 'myrenamedfile.txt', (err, res) => {
+const renameFile = (name, rename) => {
+    fs.rename(`${PATH}/${name}`, `${PATH}/${rename}`, (err, res) => {
         if (err) throw err;
         console.log('File Renamed!');
     });
 }
 
-const copyFile = () => {
-    fs.copyFile('source.txt', 'destination.txt', (err) => {
+const copyFile = (fromName, toName) => {
+    fs.copyFile(`${PATH}/${fromName}`, `${PATH}/${toName}`, (err) => {
         if (err) throw err;
-        console.log('source.txt was copied to destination.txt');
+        console.log(`${fromName} was copied to ${toName}`);
     });
 }
-const saveFile = () => {
-    fs.appendFile('./files/mynewfile1.txt', 'Hello content!', (err) => {
+const saveFile = (name, content) => {
+    fs.appendFile(`${PATH}/${name}`, content, (err) => {
         if (err) throw err;
-        return true;
+        console.log(`${name} saved!`);
     }); 
 }
 
-const deleteFile = () => {
-    fs.unlink('./files/mynewfile1.txt', (err) => {
+const deleteFile = (name) => {
+    fs.unlink(`${PATH}/${name}`, (err) => {
         if (err) throw err;
         console.log('Delete!');
     });

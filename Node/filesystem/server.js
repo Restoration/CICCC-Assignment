@@ -4,7 +4,12 @@ const app = new Koa();
 
 app.use(ctx => {
     ctx.body = 'Hello Koa';
-    fileHandler.saveFile();
+    let name = 'Hello';
+    let content = 'Hello Koa';
+    fileHandler.saveFile(name, content);
+
+    //fileHandler.readDir();
+    //fileHandler.renameFile('undefined','foo.txt');
 });
 
 app.listen(3000);
