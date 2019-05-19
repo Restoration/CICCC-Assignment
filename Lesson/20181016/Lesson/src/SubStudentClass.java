@@ -1,16 +1,13 @@
-class StudentClass{
-	protected String Name = "Autumn Fall";
-	protected String Age = "25";
-	protected String StudentID = "CS180430";
-	protected String Gender = "Male";
-}
-
 public class  SubStudentClass extends StudentClass{
-	public static void main(String[] args) {	    
+	public static void main(String[] args) {
 		SubStudentClass ssc= new SubStudentClass();
-        System.out.println(ssc.Name);
-        System.out.println(ssc.Age);
-        System.out.println(ssc.StudentID);
-        System.out.println(ssc.Gender);
+        ssc.setName("Autumn Fall");
+        ssc.setAge(25);
+        ssc.setStudentID("CS180430");
+        ssc.setGender("Male");
+        System.out.println("Name:"+ssc.getName());
+        System.out.println("Age:"+ssc.getAge());
+        System.out.println("StudentID:"+ssc.getStudentID());
+        System.out.println("Gender:"+ssc.getGender());    		
 	}
 }

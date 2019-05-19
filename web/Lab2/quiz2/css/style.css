@@ -1,0 +1,124 @@
+h2{
+}
+img{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+body{
+	color: #000000;
+	font-size: 16px;
+	word-break: break-all;
+}
+#header{
+	background: #000;
+	width: 100%;
+}
+#headerInner{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+#headerInner img{
+	width: 60px;
+	height: 60px;
+}
+nav{
+	width: 100%;
+	padding: 20px 0;
+	background: red;
+}
+#menu{
+	width: 80%;
+	margin: 0 auto;
+}
+#menu > ul{
+	text-align: left;
+}
+#menu > ul li{
+	display: inline-block;
+	margin: 0 20px  0 0;
+}
+#menu > ul li a{
+	color: #ffffff;
+	text-decoration: none;
+}
+main{
+	width: 100%;
+}
+#about{
+	background: #c5c5c5;
+}
+#aboutInner{
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+.leftBox{
+	width: 50%;
+	margin: 0 40px 0 0;
+}
+.leftBox h2{
+	margin: 0 0 20px;
+}
+.leftBox button{
+	padding: 10px;
+	border: 0;
+	border-radius: 4px;
+	background: #000;
+	color: #fff;
+	float: right;
+	font-style: italic;
+}
+.rightBox{
+	width: 50%;
+}
+.rightBox img{
+	border: solid 3px #ffffff;
+	box-shadow: 2px 4px 4px 3px #3c3c3c;
+}
+
+#webContent{
+	background: red;
+}
+#webContentInner{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 0 80px;
+}
+#webContentInner h2{
+	width: 100%;
+	padding: 30px 0;
+	color: #ffffff;
+}
+#webContentFlex{
+	display: flex;
+	justify-content: center;
+}
+#webContentInner .box{
+	width: 20%;
+	margin: 0 10px 30px;
+	padding: 10px 30px 0 10px;
+	border-right: solid 1px #fff;
+}
+
+#webContentInner .box:nth-child(4){
+	border-right: 0;
+}
+
+#webContentInner .box img{
+	margin: 0 0 30px;
+}
+#webContentInner .box p{
+	margin: 0 0 20px;
+}
+
+
+#footer{
+	padding: 20px 0;
+	background: #000000;
+	color: #ffffff;
+	text-align: center;
+}

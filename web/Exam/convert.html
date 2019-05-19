@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convert Fahrenheit to Celsius</title>
+</head>
+<body>
+    <div id="container">
+        <div id="wrap">
+            <input type="text" value="" id="fahrenheit" placeholder="Fahrenheit">
+            <div id="msg"></div>
+        </div>
+    </div>
+<script>
+function changeHandler(){
+    let fahrenheit = document.getElementById('fahrenheit').value;
+    if(fahrenheit == ''  || isNaN(fahrenheit) ){
+        document.getElementById('msg').innerHTML = "";
+        return false;
+    }
+    let celsius =  (fahrenheit -32) * 5 / 9;
+    document.getElementById('msg').innerHTML = celsius;
+}
+function init(){
+    let fahrenheit = document.getElementById('fahrenheit');
+    fahrenheit.addEventListener('keyup',changeHandler);
+}
+init();
+</script>
+</body>
+</html>

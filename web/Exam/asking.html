@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asking Question</title>
+<style>
+#msg{
+    color: red;
+}
+</style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="wrap">
+            <div id="language">
+                <form id="langForm">
+                    <ul>
+                      <li><input name="lang" type="radio" name="language" value="JavaScript" checked>: JavaScript</li>
+                      <li><input name="lang" type="radio" name="language" value="PHP">: PHP</li>
+                      <li><input name="lang" type="radio" name="language" value="Java">: Java</li>
+                      <li><input name="lang" type="radio" name="language" value="Ruby">: Ruby</li>
+                    </ul>
+                </form>
+            </div>
+            <div id="library">
+                <p>Chose library</p>
+                <form id="libForm">
+                    <ul>
+                      <li><input name="lib" type="radio" name="lib" value="CodeIgniter" class="lib" checked>: CondeIgniter</li>
+                      <li><input name="lib" type="radio" name="lib" value="Spring" class="lib">: Spring</li>
+                      <li><input name="lib" type="radio" name="lib" value="RubyOnRails" class="lib">: Ruby on Rails</li>
+                      <li><input name="lib" type="radio" name="lib" value="jQuery" class="lib">: jQuery</li>
+                    </ul>
+                </form>
+            </div>
+            <input type="submit" value="Check" id="submit">
+            <div id="msg"></div>
+        </div>
+    </div>
+<script>
+const result = {
+    'JavaScript' : 'jQuery',
+    'PHP': 'CodeIgniter',
+    'Ruby': 'RubyOnRails',
+    'Java': 'Spring',
+}
+function validation(lan,lib){
+    for(i in result){
+        if(i == lan){
+            return (result[i] == lib);
+        }
+    }
+}
+function sendHandler(){
+    let langForm = document.getElementById("langForm");
+    let langNodeList = langForm.lang;
+    let lan = langNodeList.value ;
+
+    let libForm = document.getElementById("libForm");
+    let libNodeList = libForm.lib;
+    let lib = libNodeList.value ;
+
+    if(validation(lan,lib)){
+        msg = "Your answer is correct"
+    } else {
+        msg = "Your answer is not correct"
+    }
+    let target = document.getElementById('msg');
+    target.innerHTML = msg;
+}
+
+function init(){
+    let submit = document.getElementById('submit');
+    submit.addEventListener('click',sendHandler);
+}
+init();
+
+
+</script>
+
+
+
+</body>
+</html>

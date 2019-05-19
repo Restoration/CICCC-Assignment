@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+}
+#wrap{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 30px;
+    height: 426px;
+    overflow: hidden;
+    background: #ffffff;
+    margin: 40px auto;
+}
+.grid-item{
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    overflow:hidden;
+}
+
+.grid-item h2{
+    margin: 0 auto 20px;
+    text-align: center;
+    border-bottom: solid 1px #730d0d;
+    color: #730d0d;
+}
+.grid-item img{
+    height: 426px;
+}
+
+.grid-item:hover{
+    margin-top: -426px
+}
+</style>
+
+
+<body>
+<div id="container">
+   <div id="wrap">
+        <div class="grid-item">
+            <img src="photo1.jpg" alt="photo-1">
+            <h2>Cake</h2>
+            <p>A great, everyday Chocolate Cake that you’ll make over and over again. One bowl and a whisk.
+            A crumb that’s beautifully tender and moist. It truly tastes of chocolate and keeps for up to
+            5 days. Worthy of serving plain with just a dusting of icing sugar and dollop of cream. Or pile
+            it high with frosting!</p>
+        </div>
+        <div class="grid-item">
+            <img src="photo2.jpg" alt="photo-2">
+            <h2>Cake Pufe</h2>
+            <p>I have always wanted to make cream puffs, but was afraid to. Why?  I’m not sure.  They are
+            surprisingly so easy!  And I know this seems kind of weird to say, but they are actually
+            cream puffs.  Like the ones you buy in stores.  A real cream puff.</p>
+        </div>
+        <div class="grid-item">
+            <img src="photo3.jpg" alt="photo-3">
+            <h2>Cake</h2>
+            <p>Never mind the sour cream, farmer's cheese, cream cheese, water bath, and worrying about a
+            sunken center. The filling for this delicious cheesecake has just four simple ingredients,
+            and the cake bakes in a mere 30 minutes. Now THAT'S easy!</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

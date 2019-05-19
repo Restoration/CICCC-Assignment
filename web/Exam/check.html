@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asking your age</title>
+<style>
+#msg{
+    color: red;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="wrap">
+        <h1>Asking your age</h1>
+        <p>Check your age</p>
+        <div id="msg"></div>
+        <input type="text" value="" placeholder="Type your age" id="age">
+        <input type="submit" value="Send" id="submit">
+    </div>
+</div>
+<script>
+function validation(age){
+    document.getElementById('msg').innerHTML ="";
+    let msg = "";
+    if(isNaN(age)){
+        msg = "Please type number.";
+        return msg;
+    }
+    if(age < 0){
+        msg = "you’re kidding, right";
+        return msg;
+    }
+    if(age => 0 && age < 100){
+        msg = "Hello";
+        return msg;
+    }
+
+    if(age == 0){
+        msg = "oh Baby, how can you work with computer that early in life";
+        return msg;
+    }
+    if(age == 100){
+        msg = "you are too old to play!";
+        return msg;
+    }
+    return msg;
+}
+function sendHandler(){
+    let age = document.getElementById('age').value;
+    let msg = validation(age);
+    let target = document.getElementById('msg');
+    target.innerHTML = msg;
+    return false;
+}
+function init(){
+    let submit = document.getElementById('submit');
+    submit.addEventListener('click',sendHandler);
+}
+init();
+</script>
+</body>
+</html>
