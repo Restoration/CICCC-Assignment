@@ -1,0 +1,6 @@
+# https://github.com/koajs/koa/blob/master/.gitignore
+node_modules
+test.js
+coverage
+npm-debug.log
+files/*.txt
