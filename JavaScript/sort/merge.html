@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+function merge_sort(left_part,right_part){
+    var i = 0;
+    var j = 0;
+    var results = [];
+    while (i < left_part.length || j < right_part.length) {
+        if (i === left_part.length) {
+            // j is the only index left_part
+            results.push(right_part[j]);
+            j++;
+        } else if (j === right_part.length || left_part[i] <= right_part[j]) {
+            results.push(left_part[i]);
+            i++;
+        } else {
+            results.push(right_part[j]);
+            j++;
+        }
+    }
+    return results;
+}
+console.log(merge_sort([1,3,4], [3,7,9]));
+
+function mergeSort(left,right){
+    let i = 0; // left count
+    let j = 0; // right count
+    let result = [];
+    // loop for each array
+    while(i < left.length || j < right.length){
+        // check the array value
+        if(i=== left.length){
+            result.push(right[j]);
+            j++;
+        } else if(j === right.length || left[i] <= right[j]){
+            result.push(left[i]);
+            i++;
+        } else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+    return result;
+}
+console.log(mergeSort([1,3,4], [3,7,9]));
+
+</script>
+</body>
+</html>
